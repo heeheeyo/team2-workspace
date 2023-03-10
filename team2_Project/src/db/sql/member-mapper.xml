@@ -193,4 +193,10 @@
 	           BY INSTR(A.TXT, ',', 1, LEVEL-1) > 0
 	      )
 </entry>
+
+<entry key="adminDeleteMember">
+	UPDATE TB_MEMBER
+	   SET ACT_YN = 'N'
+	WHERE MEM_NO = ?			
+</entry>
 </properties>
