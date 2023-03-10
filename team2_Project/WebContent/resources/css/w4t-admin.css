@@ -11041,3 +11041,7 @@ body.sidebar-toggled footer.sticky-footer {
 select[name=orderStatus]{
   width: 170px;
 }
+
+#locationBox input{
+  width: 300px
+}
