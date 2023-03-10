@@ -41,6 +41,7 @@ public class BoardDao {
 			pstmt = conn.prepareStatement(sql);
 			rset = pstmt.executeQuery();
 			
+			
 			if(rset.next()) {
 				listCount = rset.getInt("count");
 			}
@@ -151,7 +152,7 @@ public class BoardDao {
 			
 			while(rset.next()) {
 				list.add(new Category(rset.getInt("HEADER_NO"),
-									  rset.getString("HERADER_CONTENT")
+									  rset.getString("HEADER_CONTENT")
 									  ));
 			}
 		} catch (SQLException e) {
