@@ -47,7 +47,6 @@ QNA_NO
 ,QNA_VIEW_COUNT
 ,ANS_YN
 ,MEM_NAME
-,QCATEGORY
 ,MANAGER_ID
 FROM TB_INQUIRE
 JOIN TB_MEMBER USING(MEM_NO)
@@ -58,7 +57,7 @@ WHERE QNA_NO =?
   <entry key="selectCategoryList">
 		SELECT
 		       HEADER_NO
-		     , HERADER_CONTENT
+		     , HEADER_CONTENT
 		  FROM TB_HEADER
 	</entry>
 	
