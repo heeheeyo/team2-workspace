@@ -82,7 +82,7 @@ pageEncoding="UTF-8"%>
                                 </script>
                             </div>
                             <div id="notice-add-bottom" class="mb-3 display-flex">
-                                <div id="notice-add-file" style="display: flex;">
+                                <!-- <div id="notice-add-file" style="display: flex;">
                                     <label className="input-file-button" class="btn btn-secondary" for="notice-file">
                                         파일추가
                                       </label>
@@ -93,7 +93,7 @@ pageEncoding="UTF-8"%>
                                       <%}else{ %>
                                       		<span class="file-name" >파일없음</span>
                                       <%} %>
-                                </div>
+                                </div> -->
                                 <div id="notice-add-btns" class="table-buttons mr-0 ml-auto" align="right">
                                     <button type="button" id="notice-add-back" class="btn btn-secondary" data-toggle="modal"
                                         data-target="#backModal">뒤로가기</button>
