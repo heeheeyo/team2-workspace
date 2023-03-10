@@ -204,7 +204,7 @@ pageEncoding="UTF-8"%>
 				<div class="modal-body" align="center">
 				<form action="" method="post">
 						<input type="hidden" name="memNo" value="<%= m.getMemNo()%>">
-						<table>
+						<table id="locationForm">
                             <input type="hidden" name="locNo">
 							<tr>
 								<th>배송지 이름</th>

@@ -154,7 +154,7 @@ function modifyLocation(num){
 
 function addLocation(locYn){
   $("#Location form").attr("action", "adminInsert.lo");
-  $("input[name=memNo]").siblings("table").find("input").val("");
+  $("input[name=memNo]").siblings("#locationForm").find("input").val("");
   $("#modal-title").text("배송지 추가");
 
   if(locYn == 'Y'){
