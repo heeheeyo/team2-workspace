@@ -96,12 +96,12 @@ pageEncoding="UTF-8"%>
                                 <div id="productImg">
                                     <table>
                                         <tr>
-                                            <td><img id="titleImg" src="resources/img/admin/W4T_crop.svg" onclick="chooseFile(1);"></td>
-                                            <td><img id="subImg1" onclick="chooseFile(2);"></td>
+                                            <td><img id="titleImg" src="resources/img/admin/main.png" onclick="chooseFile(1);"></td>
+                                            <td><img id="subImg1" src="resources/img/admin/sub.png" onclick="chooseFile(2);"></td>
                                         </tr>
                                         <tr>
-                                            <td><img id="subImg2" onclick="chooseFile(3);"></td>
-                                            <td><img id="subImg3" onclick="chooseFile(4);"></td>
+                                            <td><img id="subImg2" src="resources/img/admin/sub.png" onclick="chooseFile(3);"></td>
+                                            <td><img id="subImg3" src="resources/img/admin/sub.png" onclick="chooseFile(4);"></td>
                                         </tr>
                                     </table>
                                     <div id="file-area" style="display: none;">

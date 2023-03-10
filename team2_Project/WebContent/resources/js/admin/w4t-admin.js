@@ -200,9 +200,9 @@ function loadImg(inputFile, num){
 
     }else{ 
         if(num == 1){
-            $("#titleImg").attr("src", "resources/img/admin/W4T_crop.svg"); 
+            $("#titleImg").attr("src", "resources/img/admin/main.png"); 
         }else{
-            $("#subImg" + (num-1)).attr("src", null); 
+            $("#subImg" + (num-1)).attr("src", "resources/img/admin/sub.png"); 
         }
     }
 }
