@@ -101,9 +101,9 @@ pageEncoding="UTF-8"%>
                                 </tr>
                                 <tr>
                                     <td class="text-right w-120px"><h5>이메일주소</h5></td>
-                                    <td colspan="2"><input type="email" name="email" value="<%= m.getEmail() %>"></td>
+                                    <td colspan="2"><input type="email" id="email" name="email" value="<%= m.getEmail() %>" required onchange="valiemailForm();"></td>
                                     <td class="text-right w-120px"><h5>전화번호</h5></td>
-                                    <td colspan="2"><input type="phone" name="phone" value="<%= m.getPhone() %>" required></td>
+                                    <td colspan="2"><input type="phone" id="phone" name="phone" value="<%= m.getPhone() %>" required onchange="valiphoneForm();"></td>
                                 </tr>
                                 <tr>
                                     <td class="text-right w-120px"><h5>sns아이디</h5></td>
@@ -173,7 +173,9 @@ pageEncoding="UTF-8"%>
                             <div class="table-buttons mr-0 ml-auto" align="right">
                                 <button type="button" class="btn btn-secondary" data-toggle="modal"
                                     data-target="#backModal">뒤로가기</button>
-                                <button type="submit" class="btn btn-primary">수정</button>
+                                    <button type="button" class="btn btn-warning" id="checkBtn" data-toggle="modal"
+                                    data-target="#memberDeactModal">탈퇴</button>
+                                <button type="submit" class="btn btn-primary" onclick="return validate();">수정</button>
                             </div>
                         </form>
                     </div>
@@ -190,6 +192,31 @@ pageEncoding="UTF-8"%>
 
     </div>
     <!-- End of Page Wrapper -->
+
+    <!-- DeactButton Process Modal-->
+    <div class="modal fade" id="memberDeactModal" tabindex="-1" role="dialog" aria-labelledby="memberDeactModal"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="memberDeactModal">탈퇴하기</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    선택된 회원을 정말 탈퇴하시겠습니까?
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">취소</button>
+                    <form action="<%= contextPath %>/adminDelete.me" method="post">
+                        <input type="hidden" name="memNo" value="<%= m.getMemNo()%>">
+                        <button type="submit" class="btn btn-warning">탈퇴</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Location Modal -->
 	<div class="modal" id="Location">
@@ -376,6 +403,26 @@ pageEncoding="UTF-8"%>
 		let today = new Date(now_utc-timeOff).toISOString().substring(0, 10); // 오늘 날짜
 		
 		$("input[name='birthday']").attr("max", today);
+
+        function validate(){
+            var phone = document.getElementById("phone").value;
+             // 핸드폰번호 유효성 검사
+            if (phone == "") {
+                alert("핸드폰번호를 입력해주세요.");
+                return false;
+            }
+            if (!/^[0-9]{3}-[0-9]{3,4}-[0-9]{4}$/.test(phone)) {
+                alert("핸드폰번호 형식이 올바르지 않습니다.(010-XXXX-XXXX)");
+                return false;
+            }
+
+            var email = document.getElementById("email").value;
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                alert("이메일 형식이 올바르지 않습니다.");
+                return false;
+            }
+        }
+
     </script>
 
 </body>

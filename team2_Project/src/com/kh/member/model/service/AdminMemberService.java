@@ -94,4 +94,20 @@ public class AdminMemberService {
 		return result;
 	}
 
+	public int deleteMember(int memNo) {
+		Connection conn = getConnection();
+		
+		int result = new AdminMemberDao().deleteMember(conn, memNo);
+		
+		if(result > 0) {
+			commit(conn);
+		}else {
+			rollback(conn);
+		}
+		
+		close(conn);
+		
+		return result;
+	}
+
 }
