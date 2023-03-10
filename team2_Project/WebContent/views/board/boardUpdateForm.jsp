@@ -69,7 +69,9 @@ a {
     margin-left: 0;
 }
 
-.bt_wrap a.on {
+.on {
+	width: 100px;
+	height:30px;
     border-radius: 10px;
   background-color: #e0abe8;
 	box-shadow: 0 0 0 1px #eed3f9 inset,
@@ -369,7 +371,8 @@ a {
                 </div>
                 </div>
                 <div class="bt_wrap">
-                    <button type="submit" class="on">수정</button>
+                	<input type="submit" class="on" value="수정"> 
+                   <!--  <button type="submit" class="button on">수정</button> -->
                     <a type="button" class="button" id="off" href="<%=contextPath%>/qlist.no?cpage=1">취소</a>
                 </div>
                 <br><br>

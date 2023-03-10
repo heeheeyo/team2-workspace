@@ -548,7 +548,7 @@ label.right {
                 	        // slideItem.append(imgElement);
                 	        
                 	      // 버전 1
-                				if((i+1)%12==0 || i==0){
+                			 	if((i+1)%12==0 || i==0){
                 	   		   slideList.append(slideItem);
                 	   		  console.log(count++);
                 				}
@@ -557,24 +557,24 @@ label.right {
                 	        		slideItem.append(linkElement2);
                 	        	}else{
                 	        		slideItem.append(linkElement);
-                	        	}
+                	        	} 
                 	        
-                	    // 버전 2
-                	       //if((i+1) % 13==0 || i==0){
-                	    	  // slideList.append("<li class='slideitem1'>" +
-                	    	  // "</li>"
-                	    	  // )
-                	    	   //if((i+1)%13==0){
+                	   /* / 버전 2
+                	       if((i+1) % 13==0 || i==0){
+                	    	   slideList.append("<li class='slideitem1'>" +
+                	    	   "</li>"
+                	    	   )
+                	    	   if((i+1)%13==0){
                 	    		   count++;
-                	    	  // }
-                	      // }
+                	    	   }
+                	       }
                 	      
                 	    
                 	     if((i+1)%4 == 0 && (i+1)%12 != 0){
        	        			$(".slideitem1").eq(count).append(linkElement2);
        	        		}else{
        	        			$(".slideitem1").eq(count).append(linkElement);
-       	        		} 
+       	        		}  */
                 	       
                 	   
                 	     
