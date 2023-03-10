@@ -85,7 +85,7 @@ pageEncoding="UTF-8"%>
                                     <td class="text-right w-120px"><h5>성별</h5></td>
                                     <td colspan="2">
                                         <div>
-                                            <select id="gender" name="gender">
+                                            <select id="gender" name="gender" class="custom-select">
                                                 <option value="">입력안함</option>
                                                 <option value="남">남자</option>
                                                 <option value="여">여자</option>
@@ -137,15 +137,15 @@ pageEncoding="UTF-8"%>
                                                     기본배송지
                                                 <%}%>
 		                                    </td>
-		                                    <td colspan="4" rowspan="2">
-                                                <input type="hidden" name="locNo<%= count %>" value="<%= l.getLocNo()%>"><br>
-		                                        <input type="text" name="locAddressName<%= count %>" value="<%= l.getLocAddressName()%>"><br>
-		                                        <input type="text" name="locName<%= count %>" value="<%= l.getLocName()%>"><br>
-		                                        <input type="phone" name="locAddressPhone<%= count %>" value="<%= l.getLocPhone()%>"><br>
-		                                        <input type="text" name="locAddress<%= count %>" value="<%= l.getLocAddress() %>" readonly><br>
-		                                        <input type="text" name="locAddressDetail<%= count %>" value="<%= l.getLocAddressDtl() %>" readonly><br>
-		                                        <input type="text" name="locPostNumber<%= count %>" value="<%= l.getLocPostCode() %>" readonly><br>
-		                                        <input type="hidden" name="locYn<%= count %>" value="<%= l.getLocYn() %>"><br>
+		                                    <td colspan="4" rowspan="2" id="locationBox">
+                                                <input type="hidden" class="input-w-100" name="locNo<%= count %>" value="<%= l.getLocNo()%>"><br>
+		                                        <input type="text" class="input-w-100" name="locAddressName<%= count %>" value="<%= l.getLocAddressName()%>"><br>
+		                                        <input type="text" class="input-w-100" name="locName<%= count %>" value="<%= l.getLocName()%>"><br>
+		                                        <input type="phone" class="input-w-100" name="locAddressPhone<%= count %>" value="<%= l.getLocPhone()%>"><br>
+		                                        <input type="text" class="input-w-100" name="locAddress<%= count %>" value="<%= l.getLocAddress() %>" readonly><br>
+		                                        <input type="text" class="input-w-100" name="locAddressDetail<%= count %>" value="<%= l.getLocAddressDtl() %>" readonly><br>
+		                                        <input type="text" class="input-w-100" name="locPostNumber<%= count %>" value="<%= l.getLocPostCode() %>" readonly><br>
+		                                        <input type="hidden" class="input-w-100" name="locYn<%= count %>" value="<%= l.getLocYn() %>"><br>
 
 		                                    </td>
 		                                    <td>
@@ -204,7 +204,7 @@ pageEncoding="UTF-8"%>
 				<div class="modal-body" align="center">
 				<form action="" method="post">
 						<input type="hidden" name="memNo" value="<%= m.getMemNo()%>">
-						<table>
+						<table id="locationForm">
                             <input type="hidden" name="locNo">
 							<tr>
 								<th>배송지 이름</th>
